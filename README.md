@@ -1,6 +1,6 @@
 # Nested Named Tuple
 
-Create nested namedtuples using class definitions. Useful for defining configs.
+Create a nested namedtuples using class definitions. Useful for defining configs.
 
 ## Example
 

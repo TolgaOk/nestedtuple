@@ -2,6 +2,8 @@ from typing import NamedTupleMeta, _NamedTuple
 
 
 class NestedNamedTupleMeta(type):
+    """ Metaclass for creating nestedtuple.
+    """
 
     def __new__(cls, name, bases, attrs):
 
@@ -66,6 +68,8 @@ class NestedNamedTupleMeta(type):
 
 
 def nestedtuple(cls):
+    """ nestedtuple decorator.
+    """
     class_attrs = dict(cls.__dict__)
     class_attrs.pop("__dict__")
     class_attrs.pop("__weakref__")

@@ -1,4 +1,4 @@
-from src import nestedtuple, NestedNamedTupleMeta
+from nestedtuple.src import nestedtuple, NestedNamedTupleMeta
 
 __all__ = [
     nestedtuple,
