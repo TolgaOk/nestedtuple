@@ -1,6 +1,6 @@
 # Nested Named Tuple
 
-Create a nested namedtuples using class definitions. Useful for defining configs.
+Create a nested and typed namedtuple using class definitions. Useful for defining configs.
 
 ## Example
 
@@ -11,7 +11,7 @@ from nestedtuple import nestedtuple
 
 
 @nestedtuple
-class Config():
+class Config:
 
     seed: int
 
@@ -34,6 +34,8 @@ In  [2]: config.logging
 Out [3]: (verbose=True, level='error', logger=logger(port=9076, hostname='localhost'))
 ```
 
+Notice, ```Config.logging``` is the class, hence, we initiate it by providing its arguments, while ```config.logging``` is the namedtuple instance.
+
 ```IPython
 In  [4]: config._asdict()
 Out [5]: {'seed': 42,
@@ -43,6 +45,7 @@ Out [5]: {'seed': 42,
  'flag': False}
 ```
 
+The above example is equivalent to separately defining the inner classes with a ```NamedTuple``` base class and assigning them to their parent classes.
 
 ## Install
 
@@ -52,6 +55,7 @@ Out [5]: {'seed': 42,
 Install the package in development mode via:
 
 ```bash
-pip install -r requirements.txt
 pip install -e .
 ```
+
+> Note: There is no requirements!

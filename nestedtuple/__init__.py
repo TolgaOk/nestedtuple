@@ -1,6 +1,14 @@
-from nestedtuple.src import nestedtuple, NestedNamedTupleMeta
+from nestedtuple.src import (
+    NestedNamedTupleMeta,
+    nestedtuple,
+    listof,
+    unionof,
+    tupleof)
 
 __all__ = [
     nestedtuple,
-    NestedNamedTupleMeta
+    NestedNamedTupleMeta,
+    listof,
+    unionof,
+    tupleof,
 ]
