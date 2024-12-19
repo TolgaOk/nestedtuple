@@ -51,10 +51,10 @@ The above example is equivalent to separately defining the inner classes with a 
 > [!WARNING]
 > Required: Python 3.11+
 
-Install the package in development mode via:
+Install the package via:
 
 ```bash
-pip install -e .
+pip install git+https://github.com/TolgaOk/nestedtuple
 ```
 
 > Note: There are no additional requirements!
