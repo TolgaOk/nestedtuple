@@ -3,8 +3,7 @@ import types
 
 
 class NestedNamedTupleMeta(type):
-    """ Metaclass for creating nestedtuple.
-    """
+    """Metaclass for creating nested named tuples."""
 
     def __new__(cls, name, bases, attrs):
 
@@ -37,7 +36,7 @@ class NestedNamedTupleMeta(type):
         # print(name, nm_attrs)
         nm = NamedTupleMeta(
             name,
-            (_NamedTuple, *bases),
+            (_NamedTuple,),
             {
                 **nm_attrs
             }
@@ -82,8 +81,7 @@ class NestedNamedTupleMeta(type):
 
 
 def nestedtuple(cls):
-    """ nestedtuple decorator.
-    """
+    """Decorator to create nested named tuples."""
 
     class AssignAsAttribute:
 
@@ -110,9 +108,7 @@ def nestedtuple(cls):
 
 
 def listof(cls):
-    """ assign the sub class attribute as: <class name>: List[cls] 
-        instead of <class name>: cls
-    """
+    """Assign the subclass attribute as List[cls] instead of cls."""
 
     class AssignListOfAttribute:
 
@@ -127,9 +123,7 @@ def listof(cls):
 
 
 def tupleof(cls):
-    """ assign the sub class attribute as: <class name>: List[cls] 
-        instead of <class name>: cls
-    """
+    """Assign the subclass attribute as Tuple[cls] instead of cls."""
 
     class AssignListOfAttribute:
 
@@ -144,9 +138,7 @@ def tupleof(cls):
 
 
 def unionof(cls):
-    """ assign the sub class attribute as: <class name>: Union[*cls._fields] 
-        instead of <class name>: cls
-    """
+    """Assign the subclass attribute as Union[*cls._fields] instead of cls."""
 
     class AssignListOfAttribute:
 
